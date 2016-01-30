@@ -1,0 +1,45 @@
+In this workshop you'll learn:
+------------------------------
+
+### Introduction to the R language
+
+-   vocabulary, syntax, data types, classes, etc;
+-   most used functions;
+-   built-in statistical tests;
+-   packages.
+
+### Import, export and manipulation of data
+
+-   import and export data in common formats (\*.csv, \*.xls, \*.txt, …);
+-   tools for intuitive data manipulation (e.g., dplyr and tidyr).
+
+### Visualization
+
+-   introduction to the ggplot2 system of graphics.
+
+General instructions
+--------------------
+
+### To do before course begins
+
+-   Install R from [<https://www.r-project.org>](https://www.r-project.org)
+-   Install the Rstudio IDE from [Rstudio's website](https://www.rstudio.com/products/RStudio/#Desktop)
+-   Take the [TryR](http://tryr.codeschool.com) exercises
+
+### Logistics:
+
+Local:
+
+Minas 2
+
+Dates:
+
+Feb 2-3
+
+9 - 12h and 14 - 16:30h
+
+Bibliography
+------------
+
+-   [Peng R. R programming for Data Science. Leanpub, 2015](https://leanpub.com/rprogramming)
+-   [Peng R. Exploratory Data Analysis with R. Leanpub, 2015](https://leanpub.com/exdata)
