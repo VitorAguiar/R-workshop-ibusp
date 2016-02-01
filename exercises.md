@@ -1,22 +1,18 @@
-1.  Create a vector `simul_vec` of random numbers sampled from the
+1.  Open a new script on Rstudio to save the code you will develop as
+    you complete the exercises below.
+
+2.  Create a vector `simul_vec` of random numbers sampled from the
     distribution of your choice (Normal, Poisson, Binomial, etc).
 
-2.  Create a function that returns a list with the mean and the standard
+3.  Create a function that returns a list with the mean and the standard
     deviation of the object `simul_vec`.
 
-3.  The function `rowMeans` returns the means of all rows in a
+4.  The function `rowMeans` returns the means of all rows in a
     data.frame. Create a function `sdMeans` that returns the sd of all
     rows (use the function `apply`). Read in the data [Mamiferos na
     Great
     Basin](http://ecologia.ib.usp.br/bie5782/lib/exe/fetch.php?media=dados:gbmam93.csv)
     and apply your function.
-
-4.  Read in the data [Levantamento em 3 caixetais do Estado de São
-    Paulo](http://ecologia.ib.usp.br/bie5782/lib/exe/fetch.php?media=dados:caixeta.csv).
-    With `ggplot2`, make a scatterplot of `h` vs. `cap`, faceting by
-    `local`~`parcela` using the `facet_grid()` component. Try to use the
-    argument `margins = TRUE` in `facet_grid()`. Add a
-    `geom_smooth(method = lm)`.
 
 5.  Create a data.frame from the data `Titanic` (already loaded in your
     R session) using the function `as.data.frame()`. Group the data by
@@ -74,5 +70,22 @@
     of condition in the experiment, and 2) `value` which will store the
     measurements for each observation.
 
-8.  Make a boxplot with `ggplot2` with the variable `sex` on the x axis,
-    `value` on the y axis, and fill by `treatment`.
+8.  Choose a data file from your research project and read it in R.
+
+9.  Manipulate the data with the packages `dplyr` and `tidyr`. For
+    example, transform the data into the long format, compute summary
+    statistics, apply statistical tests, etc.
+
+10. Make plots with `ggplot2` to visualize the relationship of different
+    variables in your data.
+
+11. Using the object `df2` from exercises 6 and 7, make a boxplot with
+    `ggplot2` with the variable `sex` on the x axis, `value` on the y
+    axis, and fill by `treatment`.
+
+12. Read in the data [Levantamento em 3 caixetais do Estado de São
+    Paulo](http://ecologia.ib.usp.br/bie5782/lib/exe/fetch.php?media=dados:caixeta.csv).
+    With `ggplot2`, make a scatterplot of `h` vs. `cap`, faceting by
+    `local`~`parcela` using the `facet_grid()` component. Try to use the
+    argument `margins = TRUE` in `facet_grid()`. Add a
+    `geom_smooth(method = lm)`.
