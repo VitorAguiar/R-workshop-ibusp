@@ -214,6 +214,13 @@ getting help
 
     help(package="dplyr")
 
+getting help on the internet
+----------------------------
+
+-   Google
+-   [stackoverflow](http://stackoverflow.com/questions/tagged/r)
+-   [Rseek](http://rseek.org)
+
 apply
 -----
 
