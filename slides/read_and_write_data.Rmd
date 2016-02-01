@@ -2,7 +2,9 @@
 title: "reading and writing data"
 author: "Vitor Aguiar"
 date: "February 02, 2016"
-output: ioslides_presentation
+output: 
+  md_document:
+  variant: markdown_github
 ---
 
 ```{r global_options, include=FALSE}
@@ -114,28 +116,7 @@ altura_df <- fread("altura.txt")
 # for now, let's transform it into a data.frame.
 # you can do that with the function as.data.frame() or dplyr's as_data_frame()
 
-# vcf file
-library(magrittr)
-
-header <- 
-  scan("~/mouse_500k_snps.vcf", what = "character", sep = "\n", nlines = 100) %>%
-  .[grep("^##", .)]
-
-mouse_vcf <- fread("~/mouse_500k_snps.vcf", header = TRUE, skip = length(header))
-
 
 # try to read the files at:
 http://ecologia.ib.usp.br/bie5782/doku.php?id=dados:start
-
-## specialized tools
-
-## the seqinr package
-
-library(seqinr)
-
-ftp_fasta <- "ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_mouse/release_M7/gencode.vM7.transcripts.fa.gz"
-download.file(ftp_fasta, destfile = "mouse_transcripts.fasta.gz")
-
-mouse_seqs <- read.fasta("mouse_transcripts.fasta.gz", forceDNAtolower = FALSE,
-                         as.string = TRUE, set.attributes = FALSE)
 ```
