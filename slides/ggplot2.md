@@ -93,13 +93,11 @@ stat
 ----
 
 -   transforms the data, typically by summarising it in some manner
--   can add new computed variables to the original dataset (e.g.,
-    ..density..)
 
 position adjustments
 --------------------
 
--   normally used with discrete data
+-   normally used with discrete data (bars)
 -   adjustments to deal with overlap
 
 scales
@@ -139,7 +137,7 @@ Scatterplot
 
 ------------------------------------------------------------------------
 
-    with(iris, plot(Sepal.Length, Petal.Length))
+    plot(iris$Sepal.Length, iris$Petal.Length)
 
 ![](ggplot2_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
@@ -154,9 +152,9 @@ Multiple histograms
 ===================
 
     par(mfrow = c(3, 1))
-    with(subset(iris, Species == "setosa"), hist(Sepal.Length, col = "red", main = "setosa"))
-    with(subset(iris, Species == "versicolor"), hist(Sepal.Length, col = "green", main = "versicolor"))
-    with(subset(iris, Species == "virginica"), hist(Sepal.Length, col = "blue", main = "virginica"))
+    hist(iris$Sepal.Length[iris$Species == "setosa"], col = "red", main = "setosa")
+    hist(iris$Sepal.Length[iris$Species == "versicolor"], col = "green", main = "versicolor")
+    hist(iris$Sepal.Length[iris$Species == "virginica"], col = "blue", main = "virginica")
 
 <img src="ggplot2_files/figure-markdown_strict/unnamed-chunk-8-1.png" title="" alt="" style="display: block; margin: auto;" />
 
@@ -168,9 +166,6 @@ With ggplot2:
       facet_wrap(~Species, ncol = 1)
 
 ![](ggplot2_files/figure-markdown_strict/unnamed-chunk-9-1.png)
-
-The ggplot2 advantages are not clear?
-=====================================
 
 automatic colors and legends
 ----------------------------

@@ -3,8 +3,8 @@ title: "Data viz with ggplot2"
 author: "Vitor Aguiar"
 date: "February 03, 2016"
 output: 
-    md_document:
-    variant: githhub_markdown
+  md_document:
+  variant: github_markdown
 ---
 
 ```{r global_options, include=FALSE}
@@ -88,11 +88,10 @@ describe the way that variables are mapped to things that we can see on the plot
 ## stat
 
 - transforms the data, typically by summarising it in some manner
-- can add new computed variables to the original dataset (e.g., ..density..)
 
 ## position adjustments
 
-- normally used with discrete data
+- normally used with discrete data (bars)
 - adjustments to deal with overlap
 
 ## scales
@@ -125,7 +124,7 @@ str(iris)
 ---
 
 ```{r}
-with(iris, plot(Sepal.Length, Petal.Length))
+plot(iris$Sepal.Length, iris$Petal.Length)
 ```
 
 ---
@@ -140,9 +139,9 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
 ## { .smaller}
 ```{r fig.width=5, fig.align='center'}
 par(mfrow = c(3, 1))
-with(subset(iris, Species == "setosa"), hist(Sepal.Length, col = "red", main = "setosa"))
-with(subset(iris, Species == "versicolor"), hist(Sepal.Length, col = "green", main = "versicolor"))
-with(subset(iris, Species == "virginica"), hist(Sepal.Length, col = "blue", main = "virginica"))
+hist(iris$Sepal.Length[iris$Species == "setosa"], col = "red", main = "setosa")
+hist(iris$Sepal.Length[iris$Species == "versicolor"], col = "green", main = "versicolor")
+hist(iris$Sepal.Length[iris$Species == "virginica"], col = "blue", main = "virginica")
 ```
 
 ## With ggplot2: { .smaller}
@@ -152,8 +151,6 @@ ggplot(iris, aes(x = Sepal.Length, y = ..density.., fill = Species)) +
   geom_histogram(binwidth = 0.5) +
   facet_wrap(~Species, ncol = 1)
 ```
-
-# The ggplot2 advantages are not clear?
 
 ## automatic colors and legends
 
